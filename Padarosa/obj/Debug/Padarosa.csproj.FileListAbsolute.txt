@@ -1,0 +1,12 @@
+C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\bin\Debug\Padarosa.exe.config
+C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\bin\Debug\Padarosa.exe
+C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\bin\Debug\Padarosa.pdb
+C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.csproj.AssemblyReference.cache
+C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.csproj.SuggestedBindingRedirects.cache
+C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.Form1.resources
+C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.Properties.Resources.resources
+C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.csproj.GenerateResource.cache
+C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.csproj.CoreCompileInputs.cache
+C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.exe
+C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.pdb
+C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.Login.resources
