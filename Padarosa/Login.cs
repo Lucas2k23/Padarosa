@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Padarosa.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,39 @@ namespace Padarosa
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            //instanciar uma usuario
+            Classes.Usuario usuario= new Classes.Usuario();
+            usuario.Email = txbEmail.Text;
+            usuario.Senha = txbSenha.Text;
 
+            //Obter o SELECT no banco:
+            var resultado = usuario.Logar();
+
+            if(resultado.Rows.Count == 1)
+            {
+                //senha correta:Prosseguir
+                usuario.NomeCompleto = resultado.Rows[0]["nome_completo"].ToString();
+                usuario.Id = (int)resultado.Rows[0]["id"];
+                MessageBox.Show("Ola bem vindo "+ usuario.NomeCompleto);
+                //Proximo passo: abrir a janela menu:
+                MenuPrincipal janela = new MenuPrincipal();
+                janela.ShowDialog();
+                //esconder a janela atual:
+                Hide();
+                //Mostrar o menu:
+                janela.ShowDialog();
+                //Mostrar o login quando o menu fechar:
+                Show();
+            }
+            else
+            {
+                //senha incorreta:
+                MessageBox.Show("Emmail ou senha incorretos.",
+                    "Erro", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+            
+            
         }
     }
 }
