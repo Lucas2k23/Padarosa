@@ -27,3 +27,4 @@ C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\bin\Debug\System.Threadin
 C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.MenuPrincipal.resources
 C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.csproj.CopyComplete
 C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\bin\Debug\EasyEncryption.dll
+C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.Views.GerenciamentoUsuarios.resources

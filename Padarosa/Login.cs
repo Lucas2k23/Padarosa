@@ -40,7 +40,7 @@ namespace Padarosa
                 usuario.Id = (int)resultado.Rows[0]["id"];
                 MessageBox.Show("Ola bem vindo "+ usuario.NomeCompleto);
                 //Proximo passo: abrir a janela menu:
-                MenuPrincipal janela = new MenuPrincipal();
+                MenuPrincipal janela = new MenuPrincipal(usuario);
                 janela.ShowDialog();
                 //esconder a janela atual:
                 Hide();
@@ -52,7 +52,7 @@ namespace Padarosa
             else
             {
                 //senha incorreta:
-                MessageBox.Show("Emmail ou senha incorretos.",
+                MessageBox.Show("Email ou senha incorretos.",
                     "Erro", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
