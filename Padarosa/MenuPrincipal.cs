@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Padarosa.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +40,14 @@ namespace Padarosa
         {
             //Instanciar a janela:
             Views.GerenciamentoUsuarios janela = new Views.GerenciamentoUsuarios();
+            janela.Show();
+        }
+
+        private void btnProduto_Click(object sender, EventArgs e)
+        {
+            //Instanciar um usuario:
+           
+            Views.GerenciarProduto janela = new Views.GerenciarProduto(usuario);
             janela.Show();
         }
     }

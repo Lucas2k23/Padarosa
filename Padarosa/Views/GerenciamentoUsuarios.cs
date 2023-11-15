@@ -40,6 +40,38 @@ namespace Padarosa.Views
             Classes.Usuario usuario = new Classes.Usuario();
             usuario.Id = idSelecionado;
             //Apagar:
+            var r = MessageBox.Show("Tem certeza que deseja apagar?", "Atenção!",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(r == DialogResult.Yes)
+            {
+                if (usuario.Apagar() == true)
+                {
+                    MessageBox.Show("Usuario apagado!"," sucesso!",
+                        MessageBoxButtons.OK,MessageBoxIcon.Information );
+                    
+                    //Atualizar o dgv:
+                    dgvUsuario.DataSource = usuario.ListarTudo();
+                    //Limpar os campos de edição:
+                    txbNome2.Clear();
+                    txbEmail2.Clear();
+                    txbSenha2.Clear();
+                    lblPergunta.Text = "Selecione um usuario para apagar.";
+                    //Desabilitar os grbs:
+                    gpbApagar.Enabled = false;
+                    gpbEditar.Enabled = false;
+
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Falha ao apagar usuario!", "Falha!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
+
+
+
         }
 
         private void dgvUsuarios_Load(object sender, EventArgs e)
@@ -94,6 +126,46 @@ namespace Padarosa.Views
             //Salvar o id do selecionado na variavel global:
             idSelecionado = (int)linha.Cells[0].Value;
 
+        }
+
+        private void dgvUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+            //Instanciar um usuario:
+            Classes.Usuario usuario = new Classes.Usuario();
+
+            //Obter os valores dos txbs:
+            usuario.Id = idSelecionado;
+            usuario.NomeCompleto = txbNome2.Text;
+            usuario.Email = txbEmail2.Text;
+            usuario.Senha = txbSenha2.Text;
+
+            //Editar:
+            if (usuario.Editar() == true)
+            {
+                MessageBox.Show("Usuario Editado","sucesso!",
+                    MessageBoxButtons.OK,MessageBoxIcon.Information);
+                
+                //Atualizar o dgv:
+                dgvUsuario.DataSource = usuario.ListarTudo();
+
+                txbNome2.Clear();
+                txbEmail2.Clear();
+                txbSenha2.Clear();
+                //Desabilitar os grbs:
+                gpbApagar.Enabled = false;
+                gpbEditar.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Falha ao cadastrar usuario!","Falha",
+                    MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
     }
 }

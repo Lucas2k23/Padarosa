@@ -103,6 +103,12 @@
     <Compile Include="Views\GerenciamentoUsuarios.Designer.cs">
       <DependentUpon>GerenciamentoUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\GerenciarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GerenciarProduto.Designer.cs">
+      <DependentUpon>GerenciarProduto.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +130,9 @@
     </Compile>
     <EmbeddedResource Include="Views\GerenciamentoUsuarios.resx">
       <DependentUpon>GerenciamentoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GerenciarProduto.resx">
+      <DependentUpon>GerenciarProduto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
