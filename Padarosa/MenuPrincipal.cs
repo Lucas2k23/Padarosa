@@ -50,5 +50,11 @@ namespace Padarosa
             Views.GerenciarProduto janela = new Views.GerenciarProduto(usuario);
             janela.Show();
         }
+
+        private void btnComanda_Click(object sender, EventArgs e)
+        {
+            Views.GerenciamentoComanda janela = new Views.GerenciamentoComanda(usuario);
+            janela.Show();
+        }
     }
 }

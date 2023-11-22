@@ -100,9 +100,10 @@ namespace Padarosa.Views
             produto.Preco = double.Parse(txbPrecoEdit.Text);
             produto.IdCategoria = int.Parse(cmbCatEdit.Text.Split('-')[0]);
             produto.IdRespCadastro = usuario.Id;
+            produto.Id = idSelecionado;
             if (produto.EditarProduto() == true)
             {
-                MessageBox.Show("Produto cadastrado com sucesso!");
+                MessageBox.Show("Produto editado com sucesso!");
                 txbEditNome.Clear();
                 txbPrecoEdit.Clear();
                 cmbCatEdit.Items.Clear();
@@ -113,6 +114,47 @@ namespace Padarosa.Views
             {
                 MessageBox.Show("Falha ao cadastrar Produto!");
             }
+        }
+
+        private void btnApagarProd_Click(object sender, EventArgs e)
+        {
+            
+            produto.Id = idSelecionado;
+            //Apagar:
+            var r = MessageBox.Show("Tem certeza que deseja apagar?", "Atenção!",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                if (produto.Apagar() == true)
+                {
+                    MessageBox.Show("Usuario apagado!", " sucesso!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    //Atualizar o dgv:
+                    dgvProduto.DataSource = produto.ListarTudo();
+                    //Limpar os campos de edição:
+                    txbEditNome.Clear();
+                    txbPrecoEdit.Clear();
+                    cmbCatEdit.Items.Clear();
+                    lblInformacao.Text = "Selecione um usuario para apagar.";
+                    //Desabilitar os grbs:
+                    gpbApagarProd.Enabled = false;
+                    gpbEditProd.Enabled = false;
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Falha ao apagar usuario!", "Falha!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
+        }
+
+        private void dgvProduto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

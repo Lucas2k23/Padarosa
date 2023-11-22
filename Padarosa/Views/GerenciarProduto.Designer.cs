@@ -30,12 +30,15 @@
         {
             this.dgvProduto = new System.Windows.Forms.DataGridView();
             this.gpbCadProd = new System.Windows.Forms.GroupBox();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.btnCadastrarProd = new System.Windows.Forms.Button();
             this.txbPreco = new System.Windows.Forms.TextBox();
             this.txbNomeProd = new System.Windows.Forms.TextBox();
             this.lblPreco = new System.Windows.Forms.Label();
             this.lblNomeProduto = new System.Windows.Forms.Label();
             this.gpbEditProd = new System.Windows.Forms.GroupBox();
+            this.cmbCatEdit = new System.Windows.Forms.ComboBox();
             this.btnEditarProd = new System.Windows.Forms.Button();
             this.txbPrecoEdit = new System.Windows.Forms.TextBox();
             this.txbEditNome = new System.Windows.Forms.TextBox();
@@ -46,9 +49,6 @@
             this.txbInformacaoProd = new System.Windows.Forms.TextBox();
             this.btnApagarProd = new System.Windows.Forms.Button();
             this.lblInformacao = new System.Windows.Forms.Label();
-            this.cmbCategoria = new System.Windows.Forms.ComboBox();
-            this.lblCategoria = new System.Windows.Forms.Label();
-            this.cmbCatEdit = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.gpbCadProd.SuspendLayout();
             this.gpbEditProd.SuspendLayout();
@@ -65,6 +65,7 @@
             this.dgvProduto.Size = new System.Drawing.Size(508, 187);
             this.dgvProduto.TabIndex = 4;
             this.dgvProduto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduto_CellClick);
+            this.dgvProduto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduto_CellContentClick);
             // 
             // gpbCadProd
             // 
@@ -81,6 +82,23 @@
             this.gpbCadProd.TabIndex = 5;
             this.gpbCadProd.TabStop = false;
             this.gpbCadProd.Text = "Cadastro";
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Location = new System.Drawing.Point(58, 96);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(52, 13);
+            this.lblCategoria.TabIndex = 9;
+            this.lblCategoria.Text = "Categoria";
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(118, 93);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cmbCategoria.TabIndex = 8;
             // 
             // btnCadastrarProd
             // 
@@ -142,6 +160,14 @@
             this.gpbEditProd.TabIndex = 6;
             this.gpbEditProd.TabStop = false;
             this.gpbEditProd.Text = "Edição";
+            // 
+            // cmbCatEdit
+            // 
+            this.cmbCatEdit.FormattingEnabled = true;
+            this.cmbCatEdit.Location = new System.Drawing.Point(127, 106);
+            this.cmbCatEdit.Name = "cmbCatEdit";
+            this.cmbCatEdit.Size = new System.Drawing.Size(109, 21);
+            this.cmbCatEdit.TabIndex = 7;
             // 
             // btnEditarProd
             // 
@@ -224,6 +250,7 @@
             this.btnApagarProd.TabIndex = 8;
             this.btnApagarProd.Text = "Apagar";
             this.btnApagarProd.UseVisualStyleBackColor = false;
+            this.btnApagarProd.Click += new System.EventHandler(this.btnApagarProd_Click);
             // 
             // lblInformacao
             // 
@@ -233,31 +260,6 @@
             this.lblInformacao.Size = new System.Drawing.Size(191, 13);
             this.lblInformacao.TabIndex = 7;
             this.lblInformacao.Text = "Selecione o usuario que deseja apagar";
-            // 
-            // cmbCategoria
-            // 
-            this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(118, 93);
-            this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
-            this.cmbCategoria.TabIndex = 8;
-            // 
-            // lblCategoria
-            // 
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(58, 96);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(52, 13);
-            this.lblCategoria.TabIndex = 9;
-            this.lblCategoria.Text = "Categoria";
-            // 
-            // cmbCatEdit
-            // 
-            this.cmbCatEdit.FormattingEnabled = true;
-            this.cmbCatEdit.Location = new System.Drawing.Point(127, 106);
-            this.cmbCatEdit.Name = "cmbCatEdit";
-            this.cmbCatEdit.Size = new System.Drawing.Size(109, 21);
-            this.cmbCatEdit.TabIndex = 7;
             // 
             // GerenciarProduto
             // 
