@@ -30,18 +30,19 @@
         {
             this.lblTitulo = new System.Windows.Forms.Label();
             this.gpbInformacoes = new System.Windows.Forms.GroupBox();
-            this.gpbLancamento = new System.Windows.Forms.GroupBox();
-            this.lblComanda = new System.Windows.Forms.Label();
-            this.lblCodProd = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txbComanda = new System.Windows.Forms.TextBox();
-            this.txbCodProd = new System.Windows.Forms.TextBox();
-            this.txbProdutos = new System.Windows.Forms.TextBox();
-            this.txbQuantidade = new System.Windows.Forms.TextBox();
-            this.dgvComandas = new System.Windows.Forms.DataGridView();
             this.btnContinuar = new System.Windows.Forms.Button();
+            this.txbCodProd = new System.Windows.Forms.TextBox();
+            this.txbComanda = new System.Windows.Forms.TextBox();
+            this.lblCodProd = new System.Windows.Forms.Label();
+            this.lblComanda = new System.Windows.Forms.Label();
+            this.gpbLancamento = new System.Windows.Forms.GroupBox();
             this.btnLancar = new System.Windows.Forms.Button();
+            this.txbQuantidade = new System.Windows.Forms.TextBox();
+            this.txbProdutos = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dgvComandas = new System.Windows.Forms.DataGridView();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.gpbInformacoes.SuspendLayout();
             this.gpbLancamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComandas)).BeginInit();
@@ -72,96 +73,6 @@
             this.gpbInformacoes.Text = "Informações";
             this.gpbInformacoes.Enter += new System.EventHandler(this.bpbInformacoes_Enter);
             // 
-            // gpbLancamento
-            // 
-            this.gpbLancamento.Controls.Add(this.btnLancar);
-            this.gpbLancamento.Controls.Add(this.txbQuantidade);
-            this.gpbLancamento.Controls.Add(this.txbProdutos);
-            this.gpbLancamento.Controls.Add(this.label4);
-            this.gpbLancamento.Controls.Add(this.label3);
-            this.gpbLancamento.Enabled = false;
-            this.gpbLancamento.Location = new System.Drawing.Point(12, 308);
-            this.gpbLancamento.Name = "gpbLancamento";
-            this.gpbLancamento.Size = new System.Drawing.Size(200, 182);
-            this.gpbLancamento.TabIndex = 2;
-            this.gpbLancamento.TabStop = false;
-            this.gpbLancamento.Text = "Lançamento";
-            // 
-            // lblComanda
-            // 
-            this.lblComanda.AutoSize = true;
-            this.lblComanda.Location = new System.Drawing.Point(7, 29);
-            this.lblComanda.Name = "lblComanda";
-            this.lblComanda.Size = new System.Drawing.Size(52, 13);
-            this.lblComanda.TabIndex = 0;
-            this.lblComanda.Text = "Comanda";
-            // 
-            // lblCodProd
-            // 
-            this.lblCodProd.AutoSize = true;
-            this.lblCodProd.Location = new System.Drawing.Point(6, 92);
-            this.lblCodProd.Name = "lblCodProd";
-            this.lblCodProd.Size = new System.Drawing.Size(66, 13);
-            this.lblCodProd.TabIndex = 1;
-            this.lblCodProd.Text = "Cod.Produto";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Produtos";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 91);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Quantidade";
-            // 
-            // txbComanda
-            // 
-            this.txbComanda.Location = new System.Drawing.Point(82, 29);
-            this.txbComanda.Name = "txbComanda";
-            this.txbComanda.Size = new System.Drawing.Size(100, 20);
-            this.txbComanda.TabIndex = 2;
-            // 
-            // txbCodProd
-            // 
-            this.txbCodProd.Location = new System.Drawing.Point(82, 85);
-            this.txbCodProd.Name = "txbCodProd";
-            this.txbCodProd.ReadOnly = true;
-            this.txbCodProd.Size = new System.Drawing.Size(100, 20);
-            this.txbCodProd.TabIndex = 3;
-            // 
-            // txbProdutos
-            // 
-            this.txbProdutos.Location = new System.Drawing.Point(82, 31);
-            this.txbProdutos.Name = "txbProdutos";
-            this.txbProdutos.ReadOnly = true;
-            this.txbProdutos.Size = new System.Drawing.Size(100, 20);
-            this.txbProdutos.TabIndex = 2;
-            // 
-            // txbQuantidade
-            // 
-            this.txbQuantidade.Location = new System.Drawing.Point(82, 91);
-            this.txbQuantidade.Name = "txbQuantidade";
-            this.txbQuantidade.Size = new System.Drawing.Size(100, 20);
-            this.txbQuantidade.TabIndex = 3;
-            // 
-            // dgvComandas
-            // 
-            this.dgvComandas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvComandas.Location = new System.Drawing.Point(218, 100);
-            this.dgvComandas.Name = "dgvComandas";
-            this.dgvComandas.Size = new System.Drawing.Size(355, 435);
-            this.dgvComandas.TabIndex = 3;
-            this.dgvComandas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComandas_CellClick);
-            // 
             // btnContinuar
             // 
             this.btnContinuar.BackColor = System.Drawing.Color.Lime;
@@ -173,16 +84,118 @@
             this.btnContinuar.UseVisualStyleBackColor = false;
             this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
+            // txbCodProd
+            // 
+            this.txbCodProd.Location = new System.Drawing.Point(82, 85);
+            this.txbCodProd.Name = "txbCodProd";
+            this.txbCodProd.ReadOnly = true;
+            this.txbCodProd.Size = new System.Drawing.Size(100, 20);
+            this.txbCodProd.TabIndex = 3;
+            // 
+            // txbComanda
+            // 
+            this.txbComanda.Location = new System.Drawing.Point(82, 29);
+            this.txbComanda.Name = "txbComanda";
+            this.txbComanda.Size = new System.Drawing.Size(100, 20);
+            this.txbComanda.TabIndex = 2;
+            // 
+            // lblCodProd
+            // 
+            this.lblCodProd.AutoSize = true;
+            this.lblCodProd.Location = new System.Drawing.Point(6, 92);
+            this.lblCodProd.Name = "lblCodProd";
+            this.lblCodProd.Size = new System.Drawing.Size(66, 13);
+            this.lblCodProd.TabIndex = 1;
+            this.lblCodProd.Text = "Cod.Produto";
+            // 
+            // lblComanda
+            // 
+            this.lblComanda.AutoSize = true;
+            this.lblComanda.Location = new System.Drawing.Point(7, 29);
+            this.lblComanda.Name = "lblComanda";
+            this.lblComanda.Size = new System.Drawing.Size(52, 13);
+            this.lblComanda.TabIndex = 0;
+            this.lblComanda.Text = "Comanda";
+            // 
+            // gpbLancamento
+            // 
+            this.gpbLancamento.Controls.Add(this.btnCancel);
+            this.gpbLancamento.Controls.Add(this.btnLancar);
+            this.gpbLancamento.Controls.Add(this.txbQuantidade);
+            this.gpbLancamento.Controls.Add(this.txbProdutos);
+            this.gpbLancamento.Controls.Add(this.label4);
+            this.gpbLancamento.Controls.Add(this.label3);
+            this.gpbLancamento.Enabled = false;
+            this.gpbLancamento.Location = new System.Drawing.Point(12, 308);
+            this.gpbLancamento.Name = "gpbLancamento";
+            this.gpbLancamento.Size = new System.Drawing.Size(200, 203);
+            this.gpbLancamento.TabIndex = 2;
+            this.gpbLancamento.TabStop = false;
+            this.gpbLancamento.Text = "Lançamento";
+            // 
             // btnLancar
             // 
             this.btnLancar.BackColor = System.Drawing.Color.Lime;
-            this.btnLancar.Location = new System.Drawing.Point(56, 139);
+            this.btnLancar.Location = new System.Drawing.Point(31, 139);
             this.btnLancar.Name = "btnLancar";
-            this.btnLancar.Size = new System.Drawing.Size(75, 23);
+            this.btnLancar.Size = new System.Drawing.Size(119, 23);
             this.btnLancar.TabIndex = 4;
             this.btnLancar.Text = "Lançar";
             this.btnLancar.UseVisualStyleBackColor = false;
             this.btnLancar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txbQuantidade
+            // 
+            this.txbQuantidade.Location = new System.Drawing.Point(82, 91);
+            this.txbQuantidade.Name = "txbQuantidade";
+            this.txbQuantidade.Size = new System.Drawing.Size(100, 20);
+            this.txbQuantidade.TabIndex = 3;
+            // 
+            // txbProdutos
+            // 
+            this.txbProdutos.Location = new System.Drawing.Point(82, 31);
+            this.txbProdutos.Name = "txbProdutos";
+            this.txbProdutos.ReadOnly = true;
+            this.txbProdutos.Size = new System.Drawing.Size(100, 20);
+            this.txbProdutos.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Quantidade";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Produtos";
+            // 
+            // dgvComandas
+            // 
+            this.dgvComandas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvComandas.Location = new System.Drawing.Point(218, 100);
+            this.dgvComandas.Name = "dgvComandas";
+            this.dgvComandas.Size = new System.Drawing.Size(355, 435);
+            this.dgvComandas.TabIndex = 3;
+            this.dgvComandas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComandas_CellClick);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Red;
+            this.btnCancel.Location = new System.Drawing.Point(31, 168);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(119, 23);
+            this.btnCancel.TabIndex = 5;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // GerenciamentoComanda
             // 
@@ -223,5 +236,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvComandas;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

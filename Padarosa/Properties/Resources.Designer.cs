@@ -83,6 +83,16 @@ namespace Padarosa.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap operadoracaixa {
+            get {
+                object obj = ResourceManager.GetObject("operadoracaixa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap placa_saida_seta_para_direita_de_pvc_29_x_20cm_2195 {
             get {
                 object obj = ResourceManager.GetObject("placa_saida_seta_para_direita_de_pvc_29_x_20cm_2195", resourceCulture);

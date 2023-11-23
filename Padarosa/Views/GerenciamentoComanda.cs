@@ -35,40 +35,39 @@ namespace Padarosa.Views
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var r = MessageBox.Show("Tem certeza que deseja lançar?","Aviso!",
-                MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-            if(r == DialogResult.Yes)
+            if(txbQuantidade.Text != "")
             {
-                Classes.OrdemComanda ordem = new Classes.OrdemComanda();
-                ordem.IdFicha = int.Parse(txbComanda.Text);
-                ordem.IdProduto = int.Parse(txbCodProd.Text);
-                ordem.Quantidade = int.Parse(txbQuantidade.Text);
-                ordem.IdResp = usuario.Id;
+                var r = MessageBox.Show("Tem certeza que deseja lançar?", "Aviso!",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (r == DialogResult.Yes)
+                {
+                    Classes.OrdemComanda ordem = new Classes.OrdemComanda();
+                    ordem.IdFicha = int.Parse(txbComanda.Text);
+                    ordem.IdProduto = int.Parse(txbCodProd.Text);
+                    ordem.Quantidade = int.Parse(txbQuantidade.Text);
+                    ordem.IdResp = usuario.Id;
 
-                //Efetuar o lançamento:
-                if(ordem.NovoLancamento() == true)
-                {
-                    MessageBox.Show("Lançamento concluido", "Sucesso!", 
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    gpbInformacoes.Enabled = true;
-                    gpbLancamento.Enabled = false;
-                    txbComanda.Clear();
-                    txbCodProd.Clear();
-                    txbProdutos.Clear();
-                    txbQuantidade.Clear();
-                }
-                else
-                {
-                    MessageBox.Show("Ocorreu um erro!", "Falha!",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    gpbInformacoes.Enabled = true;
-                    gpbLancamento.Enabled = false;
-                    txbComanda.Clear();
-                    txbCodProd.Clear();
-                    txbProdutos.Clear();
-                    txbQuantidade.Clear();
+                    //Efetuar o lançamento:
+                    if (ordem.NovoLancamento() == true)
+                    {
+                        MessageBox.Show("Lançamento concluido", "Sucesso!",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimparTudo();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ocorreu um erro!", "Falha!",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        LimparTudo();
+                    }
                 }
             }
+            else
+            {
+                MessageBox.Show("Existem campos nao preenchidos!", "Erro!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void dgvComandas_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -82,14 +81,37 @@ namespace Padarosa.Views
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            gpbInformacoes.Enabled = false;
-            gpbLancamento.Enabled = true;
+            if(txbComanda.Text !="" && txbCodProd.Text != "")
+            {
+
+                gpbInformacoes.Enabled = false;
+                gpbLancamento.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Verifique as informaçoes digitadas!", "Erro!", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             
         }
 
         private void bpbInformacoes_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            LimparTudo();
+        }
+        private void LimparTudo()
+        {
+            gpbInformacoes.Enabled = true;
+            gpbLancamento.Enabled = false;
+            txbComanda.Clear();
+            txbCodProd.Clear();
+            txbProdutos.Clear();
+            txbQuantidade.Clear();
         }
     }
 }

@@ -61,3 +61,4 @@ C:\Users\lucas.aalves15\OneDrive - SENAC - SP\Documentos\GitHub\Padarosa\Padaros
 C:\Users\lucas.aalves15\OneDrive - SENAC - SP\Documentos\GitHub\Padarosa\Padarosa\obj\Debug\Padarosa.Views.GerenciarProduto.resources
 C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.Views.GerenciarProduto.resources
 C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.Views.GerenciamentoComanda.resources
+C:\Users\lucas.aalves15\source\repos\Padarosa\Padarosa\obj\Debug\Padarosa.Views.GerenciamentoCaixa.resources
