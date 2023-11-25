@@ -55,8 +55,25 @@ namespace Padarosa.Views
 
         private void btnEncerrar_Click(object sender, EventArgs e)
         {
-
-            Ordem.Encerrar();
+            var r = MessageBox.Show("Tem certeza que deseja encerrar?", "Atenção",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(r == DialogResult.Yes)
+            {
+                Ordem.IdFicha = int.Parse(txbComanda.Text);
+                if (Ordem.Encerrar())
+                {
+                    MessageBox.Show("Ficha encerrada", "Sucesso!",
+                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //Limpar:
+                    txbComanda.Clear();
+                    dgvFicha.DataSource = null;
+                }
+                else
+                {
+                    MessageBox.Show("Falha ao encerrar a ficha", "Erro!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
 
         }
     }
